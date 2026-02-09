@@ -7,7 +7,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/touristika_db
     username: postgres
-    password: 39A16A88BC
+    password: 
   jpa:
     hibernate:
       ddl-auto: update

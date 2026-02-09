@@ -117,7 +117,6 @@ public class ModuleServiceImpl implements ModuleService {
 	@Override
 	public ResponseEntity<StandardResponse> removeModule(Long idUser, Long idModule) {
 		try {
-			
 			userModuleRepo.deleteByUserIdAndModuleId(idUser, idModule);
 			return ResponseEntity.accepted().body(new StandardResponse(HttpStatus.ACCEPTED, "Module revoked"));
 		} catch (NoSuchElementException e) {
