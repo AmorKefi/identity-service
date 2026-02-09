@@ -1,0 +1,29 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: identity-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/touristika_db
+    username: postgres
+    password: 39A16A88BC
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+keycloak:
+  url: http://localhost:8080
+  realm: travel-realm
+
+  auth-client:
+    client-id: auth-service
+    client-secret: 07b3KxkWxzT2RJGRRj7IOldLfbV15njb
+
+  admin-client:
+    client-id: admin-service
+    client-secret: yTqgHeYAaM7KsdvHBB6Lx3MoC5SnvevO
+
+jwt:
+  secret: CHANGE_ME_SUPER_SECRET_KEY_32_CHARS_MIN
